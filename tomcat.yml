@@ -13,6 +13,9 @@
       command: mv apache-tomcat-9.0.91 tomcat
       tags: abc
 
+    - name: git installing
+      yum: name=git state=present
+
     - name: install java
       command: yum install java-1.8.0-openjdk -y
 
