@@ -11,8 +11,8 @@ chmod +x kops-linux-amd64 kubectl
 mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
 
-aws s3api create-bucket --bucket mdbucket.k8s.local --region us-east-1
-aws s3api put-bucket-versioning --bucket mdbucket.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://mdbucket.k8s.local
-kops create cluster --name dinesh.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
+aws s3api create-bucket --bucket dineshnewbuck.k8s.local --region us-east-1
+aws s3api put-bucket-versioning --bucket dineshnewbuck.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://dineshnewbuck.k8s.local
+kops create cluster --name dinesh.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
 kops update cluster --name dinesh.k8s.local --yes --admin
