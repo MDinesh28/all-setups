@@ -14,7 +14,7 @@ sudo -i
 
 ANSIBLE SERVER:
 amazon-linux-extras install ansible2 -y
-yum install python python-pip python-devel -y
+yum install python python-pip python-dlevel -y
 vim /etc/ansible/hosts   (inventory file)  (below: 12 th line)
 
 [dev]
